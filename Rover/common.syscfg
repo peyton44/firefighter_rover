@@ -1,0 +1,143 @@
+// These arguments were used when this file was generated. They will be automatically applied on subsequent loads 
+// via the GUI or CLI invocations. Run CLI with '--help' for additional information on how to override these arguments.
+// @cliArgs --board "/ti/boards/CC3220SF_LAUNCHXL" --product "SimpleLinkSDK@3.20.00.06"
+// @versions {"data":"2019051709","timestamp":"2019051709","tool":"1.1.792","templates":"2019051709"}
+
+// Add a SENSORS BoosterPack boosterpack
+var BOOSTXL_SENSORS = scripting.addHardware("/ti/boards/boosterpacks/BOOSTXL-SENSORS");
+var SimpleLinkWifi = scripting.addModule("/ti/drivers/net/wifi/SimpleLinkWifi");
+var Crypto = scripting.addModule("/ti/drivers/Crypto");
+var DMA = scripting.addModule("/ti/drivers/DMA");
+var GPIO = scripting.addModule("/ti/drivers/GPIO");
+var Timer = scripting.addModule("/ti/drivers/Timer");
+var Watchdog = scripting.addModule("/ti/drivers/Watchdog");
+var Crypto1 = Crypto.addInstance();
+var GPIO1 = GPIO.addInstance();
+var GPIO2 = GPIO.addInstance();
+var Timer1 = Timer.addInstance();
+var Timer2 = Timer.addInstance();
+var Timer3 = Timer.addInstance();
+var Watchdog1 = Watchdog.addInstance();
+var GPIO3 = GPIO.addInstance();
+var GPIO4 = GPIO.addInstance();
+var GPIO5 = GPIO.addInstance();
+var GPIO6 = GPIO.addInstance();
+var GPIO7 = GPIO.addInstance();
+var Timer4 = Timer.addInstance();
+var SPI = scripting.addModule("/ti/drivers/SPI");
+var SPI1 = SPI.addInstance();
+var UART = scripting.addModule("/ti/drivers/UART");
+var UART1 = UART.addInstance();
+var UART2 = UART.addInstance();
+var Board = scripting.addModule("/ti/drivers/Board");
+var Power = scripting.addModule("/ti/drivers/Power");
+// IO Retention Shutdown - IO groups to be retained during Shutdown
+Power.ioRetentionShutdown = ["GRP_1"];
+// Name
+Power.parkPins.$name = "ti_drivers_power_PowerCC32XXPins0";
+// Name - The C/C++ identifier used in applications as the index parameter passed to Crypto runtime APIs
+Crypto1.$name = "Board_Crypto0";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO1.$name = "Board_GPIO0";
+// Mode - Select the GPIO mode
+GPIO1.mode = "Dynamic";
+// Assign pin
+GPIO1.gpioPin.$assign = "boosterpack.19"; // P18
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO2.$name = "Board_GPIO1";
+// Mode - Select the GPIO mode
+GPIO2.mode = "Dynamic";
+// Timer Type
+Timer1.timerType = "32 Bits";
+// Name - The C/C++ identifier used in applications as the index parameter passed to Timer runtime APIs
+Timer1.$name = "Board_Statistics";
+// Name
+Timer1.timer.$name = "MyTimer1";
+// Use Peripheral
+Timer1.timer.$assign = "Timer0";
+// Timer Type
+Timer2.timerType = "32 Bits";
+// Name - The C/C++ identifier used in applications as the index parameter passed to Timer runtime APIs
+Timer2.$name = "Board_GEN_INFO";
+// Name
+Timer2.timer.$name = "MyTimer1";
+// Name - The C/C++ identifier used in applications as the index parameter passed to Timer runtime APIs
+Timer3.$name = "Board_TIMER2";
+// Timer Type
+Timer3.timerType = "32 Bits";
+// Name
+Timer3.timer.$name = "MyTimer1";
+// Name - The C/C++ identifier used in applications as the index parameter passed to Watchdog runtime APIs
+Watchdog1.$name = "Board_WATCHDOG0";
+// Name
+Watchdog1.watchdog.$name = "MyWATCHDOG1";
+// Use Peripheral
+Watchdog1.watchdog.$assign = "WATCHDOG0";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO3.$name = "Board_GPIO3";
+// Assign pin
+GPIO3.gpioPin.$assign = "boosterpack.7"; // P05
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO4.$name = "Board_GPIO4";
+// Assign pin
+GPIO4.gpioPin.$assign = "boosterpack.14"; // P06
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO5.$name = "Board_GPIO5";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO6.$name = "Board_GPIO6";
+// Assign pin
+GPIO6.gpioPin.$assign = "boosterpack.18"; // P08
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO7.$name = "Board_GPIO7";
+// Assign pin
+GPIO7.gpioPin.$assign = "boosterpack.27"; // P63
+// Name - The C/C++ identifier used in applications as the index parameter passed to Timer runtime APIs
+Timer4.$name = "Board_TIMER0";
+// Name
+Timer4.timer.$name = "MyTimer1";
+// Name - The C/C++ identifier used in applications as the index parameter passed to SPI runtime APIs
+SPI1.$name = "Board_SPI0";
+// Name
+SPI1.spi.$name = "MySPI1";
+// Assign pin
+SPI1.spi.mosiPin.$assign = "boosterpack.15"; // P07
+// Name - The C/C++ identifier used in applications as the index parameter passed to UART runtime APIs
+UART1.$name = "Board_UART1";
+// Name
+UART1.uart.$name = "MyUART1";
+// Assign pin
+UART1.uart.txPin.$assign = "boosterpack.2"; // P58*
+// Name - The C/C++ identifier used in applications as the index parameter passed to UART runtime APIs
+UART2.$name = "Board_UART0";
+// Data Direction
+UART2.dataDirection = "Send Only";
+// Name
+UART2.uart.$name = "MyUART1";
+// Suggest solution
+GPIO2.gpioPin.$suggestSolution = "50";
+// Suggest solution
+Timer2.timer.$suggestSolution = "Timer3";
+// Suggest solution
+Timer3.timer.$suggestSolution = "Timer2";
+// Suggest solution
+GPIO5.gpioPin.$suggestSolution = "60";
+// Suggest solution
+Timer4.timer.$suggestSolution = "Timer1";
+// Suggest solution
+SPI1.spi.$suggestSolution = "SPI0";
+// Suggest solution
+SPI1.spi.sclkPin.$suggestSolution = "45";
+// Suggest solution
+SPI1.spi.misoPin.$suggestSolution = "53";
+// Suggest solution
+SPI1.spi.dmaRxChannel.$suggestSolution = "UDMA_CH30";
+// Suggest solution
+SPI1.spi.dmaTxChannel.$suggestSolution = "UDMA_CH31";
+// Suggest solution
+UART1.uart.$suggestSolution = "UART1";
+// Suggest solution
+UART1.uart.rxPin.$suggestSolution = "59";
+// Suggest solution
+UART2.uart.$suggestSolution = "UART0";
+// Suggest solution
+UART2.uart.txPin.$suggestSolution = "3";
